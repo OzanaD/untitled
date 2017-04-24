@@ -20,6 +20,20 @@
     <script>
         function sakrij(){    var x = document.getElementsByTagName("footer");
             x[0].innerHTML = ' ';}
+        function vrijeme(){
+            var d = new Date();
+            if(d.getHours()<13)
+                alert('Da! Viježbe još nisu počele');
+            else if(d.getHours()>15)
+                alert('Da! Viježbe su završile')
+            else
+                {
+                    document.getElementById("odgovor").innerHTML = "Ostalo vam je " +
+                        "još " + (15- d.getHours())
+                        + " sati i " + (59-d.getMinutes()) + " minuta.";
+                    alert('Ne!');
+                }
+        }
     </script>
 </body>
 </html>
